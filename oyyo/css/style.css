@@ -894,6 +894,7 @@ picture:nth-child(7) {
   position: absolute;
   bottom: -126px;
   left: 20px;
+  z-index: 1;
 }
 
 .fone_picture {
@@ -986,6 +987,280 @@ picture:nth-child(7) {
 #horisontal_reset {
   left: unset;
   right: 342px;
+}
+
+.parent_bg {
+  position: relative;
+}
+
+.bg_plant {
+  position: absolute;
+  left: -225px;
+  top: -562px;
+  -webkit-filter: contrast(0.2) opacity(0.1);
+          filter: contrast(0.2) opacity(0.1);
+}
+
+.info .top_info h3 {
+  margin-bottom: 20px;
+}
+
+.info_title {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.info_title .info_bcg-right {
+  position: absolute;
+  top: -86px;
+  right: -166px;
+  -webkit-filter: contrast(0.2) opacity(0.1);
+          filter: contrast(0.2) opacity(0.1);
+}
+
+.info_title .info_bcg-left {
+  position: absolute;
+  top: -86px;
+  left: -166px;
+  -webkit-filter: contrast(0.2) opacity(0.1);
+          filter: contrast(0.2) opacity(0.1);
+}
+
+.red_text {
+  color: #EA5546;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #EA5546;
+  max-width: 270px;
+}
+
+.card button {
+  background-color: #EA5546;
+  border: 1px solid #EA5546;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 0;
+  margin: 0 15px 13px 15px;
+}
+
+.card_header {
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "GardensCM", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid #EA5546;
+  padding: 15px 40px;
+  text-align: center;
+}
+
+.card_desc {
+  padding: 14px 15px 20px 15px;
+  font-size: 13px;
+  color: #939393;
+  line-height: 140%;
+}
+
+.card_teacher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px 25px 15px;
+  font-family: "Geometria", sans-serif;
+}
+
+.card_teacher .card_teacer-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+}
+
+.card_teacher .card_teacer-desc svg {
+  margin-right: 7px;
+}
+
+.card_teacher .card_teacer-desc div {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.card_teacher .card_teacer-name {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Geometria", sans-serif;
+}
+
+.card_price {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 15px 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_sub-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0 15px 25px 15px;
+}
+
+.card_sub-info svg {
+  margin-right: 7px;
+}
+
+.more_info {
+  border: 1px solid #EA5546;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.more_info-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.more_info-title .info_open-btn {
+  width: 38px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: rgba(234, 85, 70, 0.05);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.two_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(37, 7, 4, 0.05);
+  padding: 15px 0;
+}
+
+.two_column:first-child {
+  margin-top: 17px;
+}
+
+.three_column {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: minmax(520px, 1fr) 1fr 1fr;
+  border-bottom: 1px solid rgba(37, 7, 4, 0.05);
+  padding: 15px 0;
+}
+
+.no_border-bottom {
+  border-bottom: none;
+}
+
+.last_column {
+  justify-self: end;
+}
+
+.main_btn-light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15px;
+}
+
+.main_btn-light button {
+  background-color: transparent;
+  border: 1px solid #EA5546;
+  color: #EA5546;
+  padding: 15px 35px;
+}
+
+.more_info-content {
+  overflow: hidden;
+  max-height: 10000px;
+  -webkit-transition: max-height 1s ease-out;
+  -o-transition: max-height 1s ease-out;
+  transition: max-height 1s ease-out;
+}
+
+.more_info-content.active_content {
+  max-height: 0;
+  -webkit-transition: max-height 1s ease-out;
+  -o-transition: max-height 1s ease-out;
+  transition: max-height 1s ease-out;
+}
+
+.info_open-btn.close_panel {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.bold_text {
+  font-weight: 500;
 }
 
 body {
