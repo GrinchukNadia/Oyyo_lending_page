@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // спойлер, аккардеон
     let spoilerBtn = document.querySelector(".info_open-btn"),
         openPanel = document.querySelector('.more_info-title'),
         allInfo = document.querySelector(".more_info-content");
@@ -14,4 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
             allInfo.style.maxHeight = allInfo.scrollHeight + "px";
         }
     });
+    // конец спойлер, аккардеон
+
+    // кнопка прокрутки сайта наверх
+    const scrollTopBtn = document.querySelector('.scroll_top');
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 100) {   
+            scrollTopBtn.classList.remove('scroll_hide');
+        } else {
+            scrollTopBtn.classList.add('scroll_hide');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    })
+    // конец кнопка прокрутки сайта наверх
 });
