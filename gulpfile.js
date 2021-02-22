@@ -47,8 +47,10 @@ let {src, dest} = require('gulp'),
     svgSprite = require("gulp-svg-sprite"),
     ttf2woff = require("gulp-ttf2woff"),
     ttf2woff2 = require("gulp-ttf2woff2"),
-    fonter = require("gulp-fonter");
+    fonter = require("gulp-fonter"),
+    ghPages = require('gulp-gh-pages');
 
+    
 
 function browserSync() {
     browsersync.init({
@@ -136,6 +138,11 @@ function fonts() {
         .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts));
 }
+
+gulp.task('deploy', function() {
+    return gulp.src('./oyyo/**/*')
+        .pipe(ghPages());
+});
 
 gulp.task('otf2ttf', function()  {
     return src([source_folder + '/fonts/*.otf'])

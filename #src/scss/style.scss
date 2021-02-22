@@ -41,7 +41,16 @@
 @import "container";
 @import "header";
 @import "instructors";
+@import "information";
+@import "lead";
+@import "contacts";
+@import "footer";
 
+@import "buttons";
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #F6F5F1;
     font-family: "Geometria", sans-serif;
@@ -51,4 +60,8 @@ a{
     text-decoration: none;
     color: #000;
 }
+*:focus {
+    outline: none;
+}
+
 

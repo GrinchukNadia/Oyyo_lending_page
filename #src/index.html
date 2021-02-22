@@ -10,6 +10,32 @@
 <body>
     @@include('_header.html')
     @@include('_instructors.html')
+    @@include('_information.html')
+    @@include('_lead.html')
+    @@include('_contacts.html')
+    @@include('_footer.html')
+    
+
+    <script>
+        let map;
+        let position = { lat: 51.704231265141225, lng: 39.18781144722563 }
+        function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: position, 
+            zoom: 19,
+        });
+        const marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            icon: './img/map_marker.png'
+        });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-WLnSP4wAbM2mf331IK_hM5yavUpmsrc&callback=initMap">
+    </script>
     <script src="js/script.min.js"></script>
+
 </body>
 </html>

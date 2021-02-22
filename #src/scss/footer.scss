@@ -1,0 +1,23 @@
+.footer{
+    border-top: 1px solid rgba(#000000, 0.05);
+    padding: 18px 0 20px;
+}
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.privacy_policy{
+    font-size: 14px;
+    font-weight: 500;
+    a{
+        border-bottom: 1px solid #250704;
+    }
+}
+.agency{
+    font-size: 14px;
+    font-weight: 500;
+    a{
+        border-bottom: 1px solid #250704;
+    }
+}

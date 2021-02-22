@@ -54,6 +54,7 @@
         position: absolute;
         bottom: -126px;
         left: 20px;
+        z-index: 1;
     }
 }
 .fone_picture{
@@ -113,4 +114,13 @@
 #horisontal_reset{
     left: unset;
     right: 342px;
+}
+.parent_bg{
+    position: relative;
+}
+.bg_plant{
+    position: absolute;
+    left: -225px;
+    top: -562px;
+    filter: contrast(0.2) opacity(0.1);
 }

@@ -1,3 +1,40 @@
+// кнопка скролла наверх
+.scroll_top{
+    position: fixed;
+    top: 88%;
+    right: 2%;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #EA5546;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    cursor: pointer;
+    z-index: 99999;
+    svg{
+        fill: #ea5546;
+    }
+    &:hover{
+        background-color: #ea5546;
+        transition: linear ease-out 0.6s;
+        svg{
+            fill: #fff;
+        }
+    }
+    &:active{
+        border: 1px solid #ef8074; 
+        background-color: #ef8074;
+        svg{
+            fill: #ffffff;
+        }
+    }
+    &.scroll_hide{
+        display: none;
+        transition: .4s;
+    }
+}
+// конец кнопка скролла наверх
 .header_inner{
     display: flex;
     padding: 26px 0;
@@ -27,6 +64,18 @@
     border-radius: 50%;
     background-color: rgba(234, 85, 70, 0.05);
     margin-left: 5px;
+    cursor: pointer;
+    svg{
+        fill: #ea5546;
+    }
+    &:hover{
+        background-color: #ea5546;
+        transition: linear ease-out 0.6s;
+        svg{
+            fill: #fff;
+        }
+    }
+
 }
 .address_inner{
     padding-left: 15px;
@@ -38,13 +87,21 @@
     display: flex;
     align-items: center;
 }
+
+.header .contacts_tel{
+    align-items: flex-end;
+}
 .contacts_tel{
     margin-right: 20px;
-}
-.contacts_tel>a{
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
+    a{
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover{
+            color: #ea5546;
+            transition: linear ease-out 0.5s;
+        }
+    }
 }
 .callme{
     text-align: right;
@@ -53,7 +110,14 @@
     color: #EA5546;
     font-weight: 500;
     margin-top: 6px;
+    cursor: pointer;
+    
+    &:hover{
+        box-shadow: 0px 1px 0px 0px #ea5546;
+        transition: linear ease-out 0.5s;
+    }
 }
+
 .social_icons{
     display: flex;
     
@@ -140,17 +204,14 @@ picture:nth-child(7){
     grid-row: 4 / 5;
 }
 .header_button{
-    margin-top: 111px;
+    margin-top: 122px;
     position: relative;
-    button{
-        padding: 15px 32px;
-        border: 1px solid #EA5546;
-        background: transparent;
-        font-family: "Geometria", sans-serif;
-        font-size: 16px;
-        line-height: 100%;
-        color: #EA5546;
+
+    .header_btn{
+        width: fit-content;
+        height: fit-content;
     }
+    
     .vertical-line{
         width: 1px;
         height: 30px;
