@@ -4,11 +4,27 @@
             <h6>Остались вопросы?</h6>
             <p class="lead_inner-p"><span class="red_text">Оставьте свои контакты</span> и наш классный менеджер ответит на них в ближайшие 15 минут!</p>
             <div class="lead_body">
-                <div class="lead_body-form">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="text" placeholder="Номер телефона">
-                    <a href="#" class="dark_btn">Получить консультацию</a>
-                </div>
+                <form  action="mail.php" method="POST" class="lead_body-form">
+                    <div class="lead_body-form-item">
+                        <div class="validation_name">
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.13504 13.3378L0 7.20276L0.810243 6.39252L6.13504 11.7173L17.1898 0.662598L18 1.47284L6.13504 13.3378Z" fill="#EA5546"/>
+                            </svg>                                
+                        </div>
+                        <div class="input_top-name">Ваше имя</div>
+                        <input autocomplete="off" name="name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="lead_body-form-item">
+                        <div class="validation_phone">
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.13504 13.3378L0 7.20276L0.810243 6.39252L6.13504 11.7173L17.1898 0.662598L18 1.47284L6.13504 13.3378Z" fill="#EA5546"/>
+                            </svg>                                
+                        </div>
+                        <div class="input_top-phone">Номер телефона</div>
+                        <input autocomplete="off" name="phone" type="text" placeholder="Номер телефона">
+                    </div>
+                    <a type="submit" class="dark_btn">Получить консультацию</a>
+                </form>
                 <div class="lead_body-license">
                     <p>Нажимая на кнопку «Получить консультацию», я соглашаюсь с <a href="#">политикой обработки персональтных данных</a></p>
                 </div>

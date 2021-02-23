@@ -35,11 +35,36 @@
     }
 }
 // конец кнопка скролла наверх
+
 .header_inner{
     display: flex;
     padding: 26px 0;
     justify-content: space-between;
     margin-bottom: 40px;
+    align-items: center;
+}
+.phone_icon{
+    width: 44px;
+    height: 44px;
+    background-color: rgba(#ea5546, 0.05);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    svg{
+        fill: #EA5546;
+    }
+    &:hover{
+        background-color: #EA5546;
+        svg{
+            fill: #fff;
+        }
+    }
 }
 .logo{
     display: flex;
@@ -55,7 +80,21 @@
     display: flex;
     align-items: center;
 }
-.addres_icon{
+.icon{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(234, 85, 70, 0.05);
+    margin-left: 5px;
+    svg{
+        fill: #ea5546;
+    }
+}
+
+.addres_icon {
     width: 38px;
     height: 38px;
     display: flex;
@@ -206,6 +245,7 @@ picture:nth-child(7){
 .header_button{
     margin-top: 122px;
     position: relative;
+    width: fit-content;
 
     .header_btn{
         width: fit-content;
@@ -226,6 +266,73 @@ picture:nth-child(7){
         background-color: #ea5546;
         position: absolute;
         top: 24px;
-        right: -100px;
+        left: 309px;
+    }
+}
+@media (max-width: 320px){
+    .scroll_top{
+        display: none; 
+    }
+    .header_inner{
+        margin-bottom: 31px;
+        padding-top: 17px;
+    }
+    .phone_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .address{
+        display: none;
+    }
+    .contacts_tel{
+        display: none;
+    }
+    .header_info{
+        flex-direction: column-reverse;
+        h1{
+            font-size: 31px;
+        }
+    }
+    .social_icons{
+        display: none;
+    }
+    .header_logo-info{
+        display: none;
+    }
+    .header_info-title>p{
+        font-size: 16px;
+    }
+    .info-list{
+        flex-direction: column;
+        width: 100%;
+    }
+    .item_content{
+        max-width: unset;
+        width: fit-content;
+    }
+    .header_info-img{
+        grid-template-columns: repeat(3, 92px);
+        grid-template-rows: unset;
+    }
+    picture:nth-child(5){
+        display: none;
+    }
+    picture:nth-child(7){
+        display: none;
+    }
+    .vertical-line, 
+    .horisontal-line{
+        display: none;
+    }
+    .header_button{
+        width: inherit;
+        margin-top: 0;
+        .header_btn{
+            width: 100%;
+            button{
+                width: 100%;
+            }
+        }
     }
 }

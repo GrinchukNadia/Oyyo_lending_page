@@ -47,6 +47,15 @@
 @import "footer";
 
 @import "buttons";
+@import "popup";
+
+
+.info,
+.lead,
+.contacts,
+.footer{
+    display: none;
+}
 
 html{
     scroll-behavior: smooth;

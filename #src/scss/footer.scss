@@ -12,6 +12,10 @@
     font-weight: 500;
     a{
         border-bottom: 1px solid #250704;
+        &:hover{
+            color: #EA5546;
+            border-bottom: 1px solid #EA5546;
+        }
     }
 }
 .agency{
@@ -19,5 +23,9 @@
     font-weight: 500;
     a{
         border-bottom: 1px solid #250704;
+        &:hover{
+            color: #EA5546;
+            border-bottom: 1px solid #EA5546;
+        }
     }
 }
