@@ -81,3 +81,32 @@
         }
     }
 }
+@media (max-width: 426px) {
+    .lead{
+        margin-bottom: 60px;
+    }
+    .lead_inner h6{
+        font-size: 31px;
+    }
+    .lead_inner .lead_inner-p{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .lead_body-form{
+        margin-bottom: 15px;
+        flex-direction: column;
+        min-height: 320px;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .dark_btn{
+        width: 70%;
+        padding: 23px 42px;
+    }
+    .lead_body-form-item{
+        width: 92%;
+    }
+    .lead_body-license a, .lead_body-license p{
+        text-align: center;
+    }
+}

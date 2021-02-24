@@ -41,7 +41,6 @@
     align-items: center;
     padding: 35px 30px;
     position: relative;
-    min-width: 309px;
     width: 100%;
     max-width: 408px;
 
@@ -73,4 +72,12 @@
     max-width: 363px;
     text-align: center;
     line-height: 120%;
+}
+
+@media (max-width: 426px) {
+    .popup_close{
+        right: 0;
+        top: 0;
+        background-color: transparent;
+    }
 }

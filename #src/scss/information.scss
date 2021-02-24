@@ -38,7 +38,8 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #EA5546;
-    max-width: 270px;
+    min-width: 270px;
+    margin-right: 10px;
 }
 .card_btn{
     display: flex;
@@ -183,4 +184,47 @@
 }
 .bold_text{
     font-weight: 500;
+}
+
+@media (max-width: 426px) {
+    .info_title .info_bcg-right,
+    .info_title .info_bcg-left{
+        display: none;
+    }
+    .cards{
+        margin-bottom: 0px;
+    }
+    .top_info .info_title p {
+        text-align: center;
+        max-width: 228px;
+    }
+    .info_title {
+        margin-bottom: 50px;
+    }
+    .more_info{
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .more_info-content{
+        font-size: 14px;
+    }
+    .two_column{
+        flex-direction: column;
+        div{
+            padding: 6px 0;
+        }
+    }
+    .three_column{
+        grid-template-columns: 1fr;
+        div{
+            padding: 6px 0;
+        }
+    }
+    .last_column{
+        justify-self: start;
+    }
+    .first_column{
+        font-weight: 500;
+        // padding: 6px 0;
+    }
 }
