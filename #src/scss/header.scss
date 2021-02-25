@@ -304,20 +304,16 @@ picture:nth-child(7){
     .logo{
         z-index: 5;
     }
-    // .contacts-icons{
-    //     display: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     background-color: #F6F5F1;
-    //     z-index: 1;
-    //     position: fixed;
-    //     width: 100%;
-    //     height: 100%;
-    // }
-    // .address{
-    //     position: fixed;
-    //     z-index: 1;
-    // }
+    .close_burger{
+        fill: #EA5546;
+        &:hover{
+            fill: #ffffff;
+        }
+    }
+    .close_burger.none,
+    .open_burger.none{
+        display: none;
+    }
     .scroll_top{
         display: none; 
     }
@@ -354,6 +350,7 @@ picture:nth-child(7){
         left: 0;
         width: 95%;
         padding: 17px 10px;
+        z-index: 6;
     }
     .phone_icon{
         display: flex;

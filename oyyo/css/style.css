@@ -33,12 +33,14 @@
 .mobile_menu {
   padding: 18px 16px;
   position: fixed;
-  background-color: lightblue;
+  background-color: #f6f5f1;
   width: 100%;
   height: 100%;
   z-index: 6;
-  margin-top: 112px;
-  display: none;
+  margin-top: -1750px;
+  -webkit-transition: margin-top 1s ease-out;
+  -o-transition: margin-top 1s ease-out;
+  transition: margin-top 1s ease-out;
 }
 
 @font-face {
@@ -1437,6 +1439,10 @@ picture:nth-child(7) {
   transition: max-height 1s ease-out;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .more_info-content.active_content {
   max-height: 0;
   -webkit-transition: max-height 1s ease-out;
@@ -2033,6 +2039,92 @@ a {
 }
 
 @media (max-width: 426px) {
+  .mobile_menu.active_mobile-menu {
+    max-height: 100%;
+    -webkit-transition: ease-out 1s;
+    -o-transition: ease-out 1s;
+    transition: ease-out 1s;
+    margin-top: -5px;
+  }
+
+  .contacts-icons.mobile,
+  .contacts_tel.mobile,
+  .social_icons.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .contacts-icons.mobile {
+    margin-bottom: 23px;
+  }
+
+  .contacts_tel.mobile a {
+    font-size: 16px;
+  }
+
+  .contacts_tel.mobile .callme {
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .addres_icon.mobile {
+    margin-bottom: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .address.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .address.mobile .address_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .instructors_mobile-menu {
+    font-family: "GardensCM", sans-serif;
+    font-size: 26px;
+  }
+
+  .instructors_mobile-menu div {
+    margin-top: 25px;
+  }
+
+  .instructors_mobile-menu a {
+    cursor: pointer;
+  }
+
+  .instructors_mobile-menu a:hover {
+    color: #ea5546;
+  }
+
+  .inst_mobile-item.mobile_instructor {
+    position: relative;
+    margin-left: 46px;
+  }
+
+  .inst_mobile-item.mobile_instructor::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    border-radius: 2px 2px 2px 2px/ 1px 1px 1px 1px;
+    background-color: #ea5546;
+    top: 12px;
+    left: -30px;
+    position: absolute;
+  }
+
   .container {
     width: 320px;
   }
@@ -2048,6 +2140,19 @@ a {
 
   .logo {
     z-index: 5;
+  }
+
+  .close_burger {
+    fill: #EA5546;
+  }
+
+  .close_burger:hover {
+    fill: #ffffff;
+  }
+
+  .close_burger.none,
+  .open_burger.none {
+    display: none;
   }
 
   .scroll_top {
@@ -2103,6 +2208,7 @@ a {
     left: 0;
     width: 95%;
     padding: 17px 10px;
+    z-index: 6;
   }
 
   .phone_icon {

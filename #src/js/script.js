@@ -108,133 +108,35 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     // конец скрипт модальное окно открыть/закрыть
 
-    // слайдер swiper
-    function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCounter, wrapper, field}) {
-        // slider
-        const slides = document.querySelectorAll(slide),
-              slider = document.querySelector(container),
-              prev = document.querySelector(prevArrow),
-              next = document.querySelector(nextArrow),
-              total = document.querySelector(totalCounter),
-              current = document.querySelector(currentCounter),
-              slidesWrapper = document.querySelector(wrapper),
-              slidesField = document.querySelector(field),
-              slideWidth = window.getComputedStyle(slidesWrapper).width;
-    
-        let slideIndex = 1;
-        let offset = 0;
-    
-        if(slides.length < 10) {
-            total.textContent = ` 0${slides.length} `;
-            current.textContent = ` 0${slideIndex} `;
-        } else {
-            total.textContent = slides.length;
-            current.textContent = slideIndex;
-        }
-    
-        slidesField.style.width = 100 * slides.length + '%';
-        slidesField.style.display = 'flex';
-        slidesField.style.transition = '0.5s all';
-    
-        slidesWrapper.style.overflow = 'hidden';
-    
-        slider.style.position = 'relative';
-        const indicators = document.createElement('ol'),
-                dots = [];
-        indicators.classList.add('carousel-indicators');
-        slider.append(indicators);
-    
-        for(let i = 0; i < slides.length; i++) {
-            const dot = document.createElement('li');
-            dot.classList.add('dot');
-            dot.setAttribute('data-slide-to', i + 1);
-            if (i == 0) {
-                dot.style.opacity = 1;
-            }
-            indicators.append(dot);
-            dots.push(dot);
-        }
-    
-        slides.forEach( slide => {
-            slide.style.width = slideWidth;
-        });
-    
-        function currentDot() {
-            dots.forEach(dot => dot.style.opacity = '0.5');
-            dots[slideIndex -1].style.opacity = 1;
-        }
-        function addZeroSlider() {
-            if ( slides.length < 10) {
-                current.textContent = ` 0${slideIndex}`;
-            } else {
-                current.textContent = slideIndex;
-            }
-        }
-        function clearNotDigit(str) {
-            return +str.replace(/\D/g, '');
-        }
-    
-        next.addEventListener('click', () => {
-            if (offset == clearNotDigit(slideWidth) * (slides.length - 1)) {
-                offset = 0;
-            } else {
-                offset += clearNotDigit(slideWidth);
-            }
-            slidesField.style.transform = `translateX(-${offset}px)`;
-    
-            if (slideIndex == slides.length) {
-                slideIndex = 1;
-            } else {
-                slideIndex++;
-            }
-            addZeroSlider();
-            currentDot();
-        });
-        
-        prev.addEventListener('click', () => {
-            if (offset == 0) {
-                offset = clearNotDigit(slideWidth) * (slides.length - 1);
-            } else {
-                offset -= clearNotDigit(slideWidth);
-            }
-    
-            slidesField.style.transform = `translateX(-${offset}px)`;
-    
-            
-            if (slideIndex == 1) {
-                slideIndex = slides.length;
-            } else {
-                slideIndex--;
-            }
-    
-            addZeroSlider();
-            currentDot();
-        });
-    
-        dots.forEach(dot => {
-            dot.addEventListener('click', (e) => {
-                const slideTo = e.target.getAttribute('data-slide-to');
-    
-                slideIndex = slideTo;
-    
-                offset = clearNotDigit(slideWidth) * (slideTo- 1);
-                slidesField.style.transform = `translateX(-${offset}px)`;
-    
-                addZeroSlider();
-                currentDot();
-            });
-        });
-    }
+    // слайдер 
 
-    slider({
-        container: '.instructor-container',
-        nextArrow: '.next-arrow',
-        prevArrow: '.prev-arrow',
-        totalCounter: '#total',
-        currentCounter: '#current',
-        wrapper: '.instructor-wrapper',
-        field: '.instructor_inner',
-        slide: ".instructor-slide"
+    
+    // конец слайдер 
+
+    // мобильное меню
+    const burgerMenu = document.querySelector('.burger_icon'),
+          mobileMenu = document.querySelector('.mobile_menu'),
+          body = document.querySelector('body'),
+          menuLinks = document.querySelectorAll('#mobile_menu-link'),
+          close_burger = document.querySelector('.close_burger'),
+          open_burger = document.querySelector('.open_burger');
+
+
+    burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active_mobile-menu');
+        body.classList.toggle('lock');
+        close_burger.classList.toggle('none');
+        open_burger.classList.toggle('none');
     });
-    // конец слайдер swiper
+    
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active_mobile-menu');
+            body.classList.toggle('lock');
+            close_burger.classList.toggle('none');
+            open_burger.classList.toggle('none');
+        })
+    });
+    
+    // конец мобильное меню
 });

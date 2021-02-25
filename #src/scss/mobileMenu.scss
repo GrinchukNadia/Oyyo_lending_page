@@ -1,10 +1,75 @@
 .mobile_menu{
     padding: 18px 16px;
     position: fixed;
-    background-color: lightblue;
+    background-color: #f6f5f1;
     width: 100%;
     height: 100%;
     z-index: 6;
-    margin-top: 112px;
-    display: none;
+    margin-top: -1750px;
+    transition: margin-top 1s ease-out;
+    
+}
+
+@media (max-width: 426px) {
+    .mobile_menu.active_mobile-menu{
+        max-height: 100%;
+        transition: ease-out 1s;
+        margin-top: -5px;
+    }
+    .contacts-icons.mobile,
+    .contacts_tel.mobile,
+    .social_icons.mobile{
+        display: flex;
+    }
+    .contacts-icons.mobile{
+        margin-bottom: 23px;
+    }
+    .contacts_tel.mobile a{
+        font-size: 16px;
+    }
+    .contacts_tel.mobile .callme{
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .addres_icon.mobile{
+        margin-bottom: 0;
+        width: 38px;
+        height: 38px;
+    }
+    .address.mobile{
+        display: flex;
+        margin-bottom: 30px;
+
+        .address_inner {
+            display: flex;
+        }
+    }
+    .instructors_mobile-menu{
+        font-family: "GardensCM", sans-serif;
+        font-size: 26px;
+        div{
+            margin-top: 25px;
+        }
+        a{
+            cursor: pointer;
+            &:hover{
+                color: #ea5546;
+            }
+        }
+    }
+    .inst_mobile-item.mobile_instructor{
+        position: relative;
+        margin-left: 46px;
+        &::before{
+            content: "";
+            width: 20px;
+            height: 2px;
+            border-radius: 2px 2px 2px 2px/ 1px 1px 1px 1px;
+            background-color: #ea5546;
+            top: 12px;
+            left: -30px;
+            position: absolute;
+        }
+    }
 }

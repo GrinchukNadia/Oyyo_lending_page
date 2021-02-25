@@ -141,6 +141,9 @@
     max-height: 10000px;
     transition: max-height 1s ease-out;
 }
+body.lock{
+    overflow: hidden;
+}
 .more_info-content.active_content{
     max-height: 0;
     transition: max-height 1s ease-out;
