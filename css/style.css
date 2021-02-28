@@ -2083,6 +2083,7 @@ a {
 @media (max-width: 426px) {
   .mobile_menu.active_mobile-menu {
     max-height: 100%;
+    height: 100%;
     -webkit-transition: ease-out 1s;
     -o-transition: ease-out 1s;
     transition: ease-out 1s;
