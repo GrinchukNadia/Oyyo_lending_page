@@ -610,6 +610,7 @@ table {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
+  background-color: #F6F5F1;
   cursor: pointer;
   z-index: 99999;
 }
@@ -1268,6 +1269,7 @@ picture:nth-child(7) {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -1554,6 +1556,10 @@ body.lock {
 
 .bold_text {
   font-weight: 500;
+}
+
+.cards_container .paggination {
+  display: none;
 }
 
 .lead {
@@ -2422,6 +2428,12 @@ a {
 
   .cards_container {
     overflow: hidden;
+  }
+
+  .cards_container .paggination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .cards {
