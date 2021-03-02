@@ -1,5 +1,4 @@
 .info{
-    min-width: fit-content;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -32,14 +31,16 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 .card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #EA5546;
-    min-width: 270px;
-    margin-right: 10px;
+    max-width: 24%;
+    min-width: 257px;
 }
 .card_btn{
     display: flex;
@@ -49,14 +50,14 @@
     width: 100%;
 }
 .card_header{
-    min-height: 60px;
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "GardensCM", sans-serif;
     font-size: 20px;
     border-bottom: 1px solid #EA5546;
-    padding: 15px 40px;
+    padding: 15px 39px;
     text-align: center;
 }
 .card_desc{
@@ -170,7 +171,7 @@ body.lock{
 .three_column {
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(520px, 1fr) 1fr 1fr;
+    grid-template-columns: 43% 1fr 22%;
     border-bottom: 1px solid rgba(#250704, .05);
     padding: 15px 0;
 }
@@ -188,14 +189,50 @@ body.lock{
 .bold_text{
     font-weight: 500;
 }
+.cards_container .paggination{
+    display: none;
+    margin-bottom: 37px;
+    &:last-child{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 824px) {
+    .cards {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 738px){
+    .more_info-content {
+        font-size: 14px;
+    }
+    .three_column {
+        grid-template-columns: 1fr;
+    }
+    .last_column {
+        justify-self: start;
+    }
+}
 
 @media (max-width: 426px) {
     .info_title .info_bcg-right,
     .info_title .info_bcg-left{
         display: none;
     }
+    .cards_container{
+        overflow: hidden;
+    }
+    .cards_container .paggination{
+        display: flex;
+    }
     .cards{
         margin-bottom: 0px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+        width: 100%;
+        justify-content: flex-start;
     }
     .top_info .info_title p {
         text-align: center;

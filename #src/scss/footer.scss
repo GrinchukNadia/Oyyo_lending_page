@@ -29,3 +29,28 @@
         }
     }
 }
+
+@media (max-width: 901px) {
+    .footer_inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_inner .logo{
+        width: 100%;
+        margin-bottom: 31px;
+        a{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header_info{
+            text-align: start;
+        }
+    }
+    .footer .logo a .header_info{
+        margin-top: 0;
+    }
+    .privacy_policy{
+        margin-bottom: 10px;
+    }
+}

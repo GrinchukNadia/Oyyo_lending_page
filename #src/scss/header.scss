@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     transition: .4s;
+    background-color: #F6F5F1;
     cursor: pointer;
     z-index: 99999;
     svg{
@@ -127,6 +128,7 @@
     background-color: rgba(234, 85, 70, 0.05);
     margin-left: 5px;
     cursor: pointer;
+    z-index: 2;
     svg{
         fill: #ea5546;
     }
@@ -202,6 +204,9 @@
         }
     }
 }
+.header_info-title{
+    width: 100%;
+}
 .header_info-title>p{
     font-size: 18px;
     color: #949494;
@@ -229,8 +234,9 @@
 }
 .header_info-img{
     display: grid;
-    grid-template-columns: repeat(3, 170px);
-    grid-template-rows: repeat(4, 170px);
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px;
     img{
         width: 100%;
@@ -293,9 +299,9 @@ picture:nth-child(7){
         left: 309px;
     }
 }
-@media (max-width: 426px){
+@media (max-width: 900px) {
     .header{
-        margin-bottom: 81px;
+        // margin-bottom: 81px;
         z-index: 2;
     }
     .header_inner::before{
@@ -327,7 +333,7 @@ picture:nth-child(7){
         align-items: center;
         cursor: pointer;
         z-index: 5;
-
+        
         .burger_inner{
             display: flex;
             justify-content: center;
@@ -348,7 +354,7 @@ picture:nth-child(7){
         position: fixed;
         top: 0;
         left: 0;
-        width: 95%;
+        width: 100%;
         padding: 17px 10px;
         z-index: 6;
     }
@@ -365,6 +371,41 @@ picture:nth-child(7){
     .header_logo-info{
         display: none;
     }
+    .header_info{
+        margin-top: 106px;
+    }
+}
+
+@media (max-width: 782px) {
+    .header_button{
+        margin-top: 50px;
+    }
+    .header_button .vertical-line{
+        top: -56px;
+    }
+    .header_button .horisontal-line{
+        left: 250px;
+        width: 140px;
+    }
+}
+@media (max-width: 769px) {
+    .header_info{
+        flex-direction: column-reverse;
+        margin-top: 106px;
+    }
+    picture:nth-child(5){
+        display: none;
+    }
+    picture:nth-child(7){
+        display: none;
+    }
+    .header_info-img{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
+    }
+}
+
+@media (max-width: 426px){
     .header_info{
         flex-direction: column-reverse;
         margin-top: 106px;
@@ -384,7 +425,7 @@ picture:nth-child(7){
         width: fit-content;
     }
     .header_info-img{
-        grid-template-columns: repeat(3, 92px);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: unset;
     }
     picture:nth-child(5){

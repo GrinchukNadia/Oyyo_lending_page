@@ -94,3 +94,9 @@ button, a{
         background-color: transparent;   
     }
 }
+@media (max-width: 426px){
+    .dark_btn {
+        width: 100%;
+        padding: 23px 42px;
+    }
+}
